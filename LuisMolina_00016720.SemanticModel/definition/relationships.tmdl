@@ -1,0 +1,10 @@
+relationship 0e11e326-f4a7-4179-a50f-07e16e9ff056
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VentasVehiculos(Hoja1).Fecha
+	toColumn: LocalDateTable_268a5f5d-6c6c-4755-9fa9-fab69439fd6c.Date
+
+relationship b4e6451c-3502-4269-9ae5-96adead4c436
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VentasVehiculos(Hoja1).fecha_nacimiento
+	toColumn: LocalDateTable_b0edeee2-c0ce-407c-9cd4-52ffc15a1f67.Date
+

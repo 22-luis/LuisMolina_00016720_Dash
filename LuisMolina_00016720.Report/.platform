@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "LuisMolina_00016720"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "08108ae3-7dc7-4d57-994a-74b8c6591c56"
+  }
+}
