@@ -1,6 +1,26 @@
 table VentasVehiculos(Hoja1)
 	lineageTag: ae98ad8c-48bc-430d-97f4-489f4b440861
 
+	measure 'Sum of Precio Venta sin IGV plus Sum of Precio Venta sin IGV' =
+			
+			SUM('VentasVehiculos(Hoja1)'[Precio Venta sin IGV]) + SUM('VentasVehiculos(Hoja1)'[Precio Venta sin IGV])
+		lineageTag: fc3fe4db-8a07-42f9-9c1e-9836043c13c5
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalAddition"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VentasCanal = SUM('VentasVehiculos(Hoja1)'[Precio Venta sin IGV])
+		lineageTag: fb9d851d-a3b4-4835-af20-a2424804875f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Fecha
 		dataType: dateTime
 		formatString: Long Date
@@ -463,4 +483,6 @@ table VentasVehiculos(Hoja1)
 				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

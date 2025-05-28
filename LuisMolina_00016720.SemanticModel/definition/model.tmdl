@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["VentasVehiculos(Hoja1)"]
+annotation PBI_QueryOrder = ["VentasVehiculos(Hoja1)","Variables"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -18,6 +18,7 @@ ref table VentasVehiculos(Hoja1)
 ref table DateTableTemplate_3a1317b1-f7ef-4180-8371-39f52645089c
 ref table LocalDateTable_268a5f5d-6c6c-4755-9fa9-fab69439fd6c
 ref table LocalDateTable_b0edeee2-c0ce-407c-9cd4-52ffc15a1f67
+ref table Variables
 
 ref cultureInfo en-US
 

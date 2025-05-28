@@ -1,11 +1,16 @@
 {
-  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.63\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleDefault\",\"version\":\"5.63\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
       "resourcePackage": {
         "disabled": false,
         "items": [
+          {
+            "name": "AccessibleDefault",
+            "path": "BuiltInThemes/AccessibleDefault.json",
+            "type": 201
+          },
           {
             "name": "CY24SU10",
             "path": "BaseThemes/CY24SU10.json",
@@ -21,12 +26,68 @@
     {
       "config": "{}",
       "displayName": "Page 1",
-      "displayOption": 1,
+      "displayOption": 3,
       "filters": "[]",
-      "height": 720.00,
+      "height": 1600.00,
       "name": "8ece4e18a1f19bada46a",
-      "visualContainers": [],
-      "width": 1280.00
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"44898b867b1f10ed74a2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":25,\"y\":1001.6666666666667,\"z\":3000,\"width\":1408.3333333333335,\"height\":520,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Variables.VentasPorCanal\"}],\"Category\":[{\"queryRef\":\"VentasVehiculos(Hoja1).Fecha.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"VentasVehiculos(Hoja1).Fecha.Variation.Date Hierarchy.Month\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"Variables\",\"Type\":0},{\"Name\":\"v1\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"VentasPorCanal\"},\"Name\":\"Variables.VentasPorCanal\",\"NativeReferenceName\":\"VentasPorCanal\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Name\":\"Variation\",\"Property\":\"Fecha\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"VentasVehiculos(Hoja1).Fecha.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Fecha Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Name\":\"Variation\",\"Property\":\"Fecha\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"VentasVehiculos(Hoja1).Fecha.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"Fecha Month\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Variacion de ventas a lo largo de los años'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 520.00,
+          "width": 1408.33,
+          "x": 25.00,
+          "y": 1001.67,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"646e5331b0beccf0d1fe\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1215,\"y\":555,\"z\":2000,\"width\":218.33333333333334,\"height\":280,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"VentasVehiculos(Hoja1).Modelo\",\"active\":true},{\"queryRef\":\"VentasVehiculos(Hoja1).Version\",\"active\":true}],\"Values\":[{\"queryRef\":\"Variables.VentasPorCanal\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0},{\"Name\":\"v1\",\"Entity\":\"Variables\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Modelo\"},\"Name\":\"VentasVehiculos(Hoja1).Modelo\",\"NativeReferenceName\":\"Modelo\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Version\"},\"Name\":\"VentasVehiculos(Hoja1).Version\",\"NativeReferenceName\":\"Version\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"VentasPorCanal\"},\"Name\":\"Variables.VentasPorCanal\",\"NativeReferenceName\":\"VentasPorCanal\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"VentasPorCanal\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"VentasVehiculos(Hoja1).Modelo\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VentasVehiculos(Hoja1)\"}},\"Property\":\"Modelo\"}}],\"isPinned\":true},{\"queryRefs\":[\"VentasVehiculos(Hoja1).Version\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Civic'\"}}],\"isToggled\":true}]}}],\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"4edede18975afb367ebb\",\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Modelo\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"''\"}}]]}}}}}]},\"type\":\"Exclude\",\"howCreated\":4,\"filterExpressionMetadata\":{\"expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VentasVehiculos(Hoja1)\"}},\"Property\":\"Modelo\"}}],\"cachedValueItems\":[{\"identities\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VentasVehiculos(Hoja1)\"}},\"Property\":\"Modelo\"}},\"Right\":{\"Literal\":{\"Value\":\"''\"}}}}}],\"valueMap\":{\"0\":\"\"}}]}}]",
+          "height": 280.00,
+          "width": 218.33,
+          "x": 1215.00,
+          "y": 555.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"698486a4513b228a8760\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.666666666666668,\"y\":555,\"z\":1000,\"width\":706.6666666666667,\"height\":423.33333333333337,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"VentasVehiculos(Hoja1).modelo_vehiculo\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(VentasVehiculos(Hoja1).modelo_vehiculo)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v1\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"modelo_vehiculo\"},\"Name\":\"VentasVehiculos(Hoja1).modelo_vehiculo\",\"NativeReferenceName\":\"modelo_vehiculo\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"modelo_vehiculo\"}},\"Function\":5},\"Name\":\"CountNonNull(VentasVehiculos(Hoja1).modelo_vehiculo)\",\"NativeReferenceName\":\"Count of modelo_vehiculo\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"modelo_vehiculo\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Modelos más vendidos'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"null\"}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[{\"name\":\"b9dd4701460c5be96664\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VentasVehiculos(Hoja1)\"}},\"Property\":\"modelo_vehiculo\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"modelo_vehiculo\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"''\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}]",
+          "height": 423.33,
+          "width": 706.67,
+          "x": 31.67,
+          "y": 555.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"71cd0501abbf68374601\",\"layouts\":[{\"id\":0,\"position\":{\"x\":750,\"y\":555,\"z\":5000,\"width\":450,\"height\":360,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"VentasVehiculos(Hoja1).Vendedor_10\"},{\"queryRef\":\"Sum(VentasVehiculos(Hoja1).Vendedor)\"},{\"queryRef\":\"Sum(VentasVehiculos(Hoja1).Precio Venta sin IGV)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Vendedor\"}},\"Function\":0},\"Name\":\"Sum(VentasVehiculos(Hoja1).Vendedor)\",\"NativeReferenceName\":\"Sum of Vendedor\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Vendedor_10\"},\"Name\":\"VentasVehiculos(Hoja1).Vendedor_10\",\"NativeReferenceName\":\"Vendedor_10\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Precio Venta sin IGV\"}},\"Function\":0},\"Name\":\"Sum(VentasVehiculos(Hoja1).Precio Venta sin IGV)\",\"NativeReferenceName\":\"Sum of Precio Venta sin IGV\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 450.00,
+          "x": 750.00,
+          "y": 555.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"9b5deaedf6bd3c4fec4c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":31.666666666666668,\"y\":61.66666666666667,\"z\":0,\"width\":670,\"height\":413.33333333333337,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"VentasVehiculos(Hoja1).canal\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(VentasVehiculos(Hoja1).Precio Venta sin IGV)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"canal\"},\"Name\":\"VentasVehiculos(Hoja1).canal\",\"NativeReferenceName\":\"Count of canal\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Precio Venta sin IGV\"}},\"Function\":0},\"Name\":\"Sum(VentasVehiculos(Hoja1).Precio Venta sin IGV)\",\"NativeReferenceName\":\"Precio Venta sin IGV\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Precio Venta sin IGV\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Ventas por canales '\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"282decd670f6c55b640e\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VentasVehiculos(Hoja1)\"}},\"Property\":\"Precio Venta sin IGV\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false},{\"name\":\"3de07aaed1db17936549\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"VentasVehiculos(Hoja1)\"}},\"Property\":\"canal\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"canal\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"''\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 413.33,
+          "width": 670.00,
+          "x": 31.67,
+          "y": 61.67,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fa5e673eecaee1c203a8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":738.3333333333334,\"y\":61.66666666666667,\"z\":4000,\"width\":695,\"height\":371.6666666666667,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"VentasVehiculos(Hoja1).tipo_canal\",\"active\":true}],\"Y\":[{\"queryRef\":\"Variables.Prome_Canal\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"VentasVehiculos(Hoja1)\",\"Type\":0},{\"Name\":\"v1\",\"Entity\":\"Variables\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"tipo_canal\"},\"Name\":\"VentasVehiculos(Hoja1).tipo_canal\",\"NativeReferenceName\":\"tipo_canal\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Prome_Canal\"},\"Name\":\"Variables.Prome_Canal\",\"NativeReferenceName\":\"Prome_Canal\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v1\"}},\"Property\":\"Prome_Canal\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Promedios de  los canales'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 371.67,
+          "width": 695.00,
+          "x": 738.33,
+          "y": 61.67,
+          "z": 4000.00
+        }
+      ],
+      "width": 1500.00
     }
-  ]
+  ],
+  "theme": "AccessibleDefault"
 }

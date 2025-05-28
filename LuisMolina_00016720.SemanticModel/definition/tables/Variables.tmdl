@@ -1,0 +1,31 @@
+table Variables
+	lineageTag: 0b130d13-c268-4585-9c7f-9f9bbf42742a
+
+	measure VentasPorCanal = SUM('VentasVehiculos(Hoja1)'[Precio Venta sin IGV])
+		lineageTag: 834fa8a7-6fc9-4dcc-98c9-61b2ab5215c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VentasModelo = COUNT('VentasVehiculos(Hoja1)'[modelo_vehiculo])
+		formatString: 0
+		lineageTag: 82f987c9-9aca-4322-b95f-610bb66a188b
+
+	measure Prome_Canal = AVERAGE('VentasVehiculos(Hoja1)'[Precio Venta sin IGV])
+		lineageTag: b5f554af-da2a-4ea7-8880-9717065f10e4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Variables = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
